@@ -24,6 +24,7 @@ class TextStyles {
       TextStyle(fontWeight: FontWeight.bold, fontFamily: font);
   TextStyle get texExtratBold =>
       TextStyle(fontWeight: FontWeight.w800, fontFamily: font);
+  TextStyle get textTitle => texExtratBold.copyWith(fontSize: 28);
   TextStyle get textButtontLabel => textBold.copyWith(fontSize: 14);
 }
 

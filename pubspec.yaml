@@ -44,6 +44,8 @@ dependencies:
   flutter_bloc: ^8.1.1
   equatable: ^2.0.5
   match: ^0.4.1
+  auto_size_text: ^3.0.0
+  shared_preferences: ^2.0.17
 
 dev_dependencies:
   flutter_test:
