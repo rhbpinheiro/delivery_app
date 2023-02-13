@@ -169,7 +169,9 @@ class _ProductDetailPageState
                             Text(
                               'Adicionar',
                               style: context.textStyles.texExtratBold
-                                  .copyWith(fontSize: 13),
+                                  .copyWith(fontSize: 13,
+                                  color: Colors.black,
+                                  ),
                             ),
                             const SizedBox(
                               width: 10,
@@ -179,7 +181,9 @@ class _ProductDetailPageState
                                 (widget.product.price * amount).currencyPTBR,
                                 textAlign: TextAlign.center,
                                 style: context.textStyles.texExtratBold
-                                    .copyWith(fontSize: 13),
+                                    .copyWith(fontSize: 13,
+                                    color: Colors.black,
+                                    ),
                               ),
                             ),
                           ],

@@ -8,7 +8,7 @@ class DeliveryAppbar extends AppBar {
           elevation: elevation,
           title: Image.asset(
             'assets/images/logo.png',
-            width: 80,
+            width: 50,
           ),
         );
 }

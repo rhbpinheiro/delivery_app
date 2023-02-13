@@ -10,7 +10,7 @@ class ColorApp {
     return _instance!;
   }
 
-  Color get primary => const Color(0XFF007D21);
+  Color get primary => Color(0XFFFFCC00);
   Color get secondary => const Color(0XFFF8880C);
 }
 

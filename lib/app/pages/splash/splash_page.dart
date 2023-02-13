@@ -28,7 +28,12 @@ class SplashPage extends StatelessWidget {
                     SizedBox(
                       height: context.percentHeight(.3),
                     ),
-                    Image.asset('assets/images/logo.png'),
+                    Image.asset(
+                      'assets/images/logo.png',
+                      width: context.percentWidth(.5),
+                    fit: BoxFit.contain,
+
+                    ),
                     const SizedBox(
                       height: 80,
                     ),
@@ -39,6 +44,7 @@ class SplashPage extends StatelessWidget {
                         Navigator.of(context).popAndPushNamed('/home');
                       },
                       label: 'ACESSAR',
+                      
                     ),
                   ],
                 ),

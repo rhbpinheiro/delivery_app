@@ -19,7 +19,11 @@ class ShoppingBagWidget extends StatelessWidget {
     final sp = await SharedPreferences.getInstance();
     if (!sp.containsKey('accessToken')) {
       final loginResult = await navigator.pushNamed('/auth/login');
+      if (loginResult == null || loginResult == false) {
+        return;
+      }
     }
+    await navigator.pushNamed('/order');
   }
 
   @override
@@ -50,20 +54,24 @@ class ShoppingBagWidget extends StatelessWidget {
           children: [
             const Align(
               alignment: Alignment.centerLeft,
-              child: Icon(Icons.shopping_cart_outlined),
+              child: Icon(Icons.shopping_cart_outlined, color: Colors.black),
             ),
             Align(
               alignment: Alignment.center,
               child: Text(
                 "Ver Sacola",
-                style: context.textStyles.texExtratBold.copyWith(fontSize: 14),
+                style: context.textStyles.texExtratBold.copyWith(
+                  fontSize: 14,
+                  color: Colors.black,
+                ),
               ),
             ),
             Align(
               alignment: Alignment.centerRight,
               child: Text(
                 totalBag,
-                style: context.textStyles.texExtratBold.copyWith(fontSize: 11),
+                style: context.textStyles.texExtratBold
+                    .copyWith(fontSize: 11, color: Colors.black),
               ),
             ),
           ],
